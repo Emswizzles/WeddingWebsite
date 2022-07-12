@@ -1,0 +1,324 @@
+/* GENERAL STYLES */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+footer{
+    background-color: #bad4bc;
+    padding: 5px;
+    margin-top: 8px;
+}
+
+.flex {
+    display: flex;
+}
+
+/* HEADER AND NAV BAR */
+.title {
+    padding: 20px 0 2px 0;
+}
+
+.names{
+    color: black;
+    font-size: 2.5rem;
+}
+
+.sunflower{
+    height: 3rem;
+    width: 3rem;
+    padding: 10px 10px 0px 10px;
+}
+
+hr {
+    width: 230px;
+    height: 1px;
+    border: 0;
+    background-color: grey;
+}
+
+.primary-nav {
+    list-style: none;
+    gap: 3.5rem;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+    font-size: 1.1rem;
+}
+
+.mobile-nav-toggle{
+    display: none;
+}
+
+/* For smaller screen sizes */
+@media (max-width: 50em ){
+    .primary-nav{
+        position: fixed;
+        /* Push the menu to the right of the screen */
+        inset: 0 0 0 30%;
+        background-color: white;
+        flex-direction: column;
+        padding: 2rem;
+        /* Slide the menu off screen as standard */
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+
+    /* If the data-visible attribute has been set to true - slide the menu onto the screen */
+    .primary-nav[data-visible = "true"]{
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-toggle{
+        display: block;
+        position: absolute;
+        /* Make sure the button is on top of everything else */
+        z-index: 9999;
+        background-color: transparent;
+        border: 0;
+        width: 2rem;
+        height: 2rem;
+        /* Bring in the button a little bit from the sides - able to do this with absolute positioning */
+        top: 2rem;
+        right: 3rem;
+    }
+
+    .menu-mode{
+        background-image: url(images/menu-icon.png);
+        background-repeat: no-repeat;
+    }
+
+    .cross-mode {
+        background-image: url(images/cross-icon.png);
+        background-repeat: no-repeat;
+    }
+}
+
+/* HOME PAGE */
+
+.image-placeholder{
+    width: 100%;
+    height: 300px;
+    background-color: steelblue;
+    margin-top: 40px;
+}
+
+.story{
+    margin: 2% 25%;
+}
+
+.story-title{
+    font-size: 2rem;
+    margin-top: 50px;
+}
+
+.story-icon{
+    padding: 20px 0px 10px;
+    width: 40px;
+    height: 40px;
+}
+
+/* WEDDING PAGE */
+
+.top-container{
+    background-color: #F7D716;
+    margin: 5% 15% 5% 15%;
+    padding: 5px;
+    border-radius: 50px;
+}
+
+.date-title{
+    font-size: 4rem;
+    margin: 20px;
+}
+
+.timeline-container{
+    margin: 5% 15%;
+    padding: 10px;
+}
+
+/* The timeline */
+
+.timeline-title{
+    font-size: 2.5rem;
+    margin: 0px 0px 50px 0px;
+}
+
+.vtl {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+  
+/* Drawing a vertical line using ::before */
+.vtl::before {
+    content: "";
+    width: 5px;
+    background-color: #32a852;
+    position: absolute;
+    top: 0; bottom: 0; left: 50%;
+}
+  
+/* Creating the leaf shapes for each event */
+.event-left {
+	width: 100px;
+	height: 120px;
+	border-radius: 0 80px;
+	background-color: #259925;
+	transform: rotate(0deg);
+    padding: 20px 30px;
+    margin-bottom: 10px;
+   
+    position: relative;
+    left: 21%;
+}
+
+.event-right {
+	width: 100px;
+	height: 120px;
+	border-radius: 80px 0px;
+	background-color: #259925;
+	transform: rotate(0deg);
+    padding: 20px 30px;
+    margin-bottom: 10px;
+   
+    position: relative;
+    left: 53%;
+}
+   
+/* Leaf text */
+p.date {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: white;
+}
+
+p.txt {
+    margin: 10px 0 0 0;
+    color: white;
+}
+   
+/* Circles on the timeline */
+.event-left::after, .event-right::after {
+    content: "";
+    background: #fff;
+    border: 4px solid #32a852;
+    width: 20px; 
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+}
+   
+/* Positioning the left leaf circles */
+  .event-left::after { 
+    top: 95%; 
+    left: 101%; 
+}
+   
+/* Positioning the right leaf circles */
+  .event-right::after { 
+    top: 95%; 
+    right: 101%; 
+}
+
+.bottom-container{
+    margin: 5% 30%;
+}
+
+
+/* ACCOMODATION & GIFTS PAGE */
+
+.accomodation-image{
+    width: 100%;
+    height: 300px;
+    background-image: url(images/nightsky.jpg);
+}
+
+.accomodation-title{
+    color: white;
+    font-size: 4rem;
+    padding-top: 100px;
+}
+
+.acc-container{
+    margin: 5% 25%;
+}
+
+/* RSVP PAGE */
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 5% 15%;
+    text-align: left;
+}
+
+.form-header{
+    text-align: center;
+}
+  
+input[type=text], select, textarea {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* Allows user to drag the textarea to make it bigger vertically only */
+    resize: vertical;
+    /* Includes all padding and borders in the elements width/height so that they end up the same size */
+    box-sizing: border-box;
+}
+  
+label {
+    padding: 12px;
+    display: inline-block;
+}
+
+/* Button styling */
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+  
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+  
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+  
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+}
+

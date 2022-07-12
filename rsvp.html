@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chris & Emma</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+    <script src="nav.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="title">
+            <img src="images/sunflower1.png" class="sunflower">
+            <h1><a href="index.html" class="names">Chris & Emma</a></h1>
+        </div>
+
+        <button class="mobile-nav-toggle menu-mode"></button>
+
+        <nav>
+            <ul class="primary-nav flex" data-visible="false">
+                <hr>
+                <li>
+                    <a href="wedding.html">Wedding</a>
+                </li>
+                <li>
+                    <a href="accomodation.html">Accomodation</a>
+                </li>
+                <li>
+                    <a href="gifts.html">Gifts</a>
+                </li>
+                <li>
+                    <a href="rsvp.html">RSVP</a>
+                </li>
+                <hr>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="image-placeholder">
+            <h1 class="accomodation-title">RSVP</h1>
+        </div>
+
+        <div class="container">
+            <form action="">
+                <div class="form-header">
+                    <img src="images/envelope-icon.png">
+                    <h1>We'd be grateful if you could complete this form by March 31st 2023</h1>
+                </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="fname">First Name</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="lname">Last Name</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="attendance">Attendance</label>
+                </div>
+                <div class="col-75">
+                  <select id="attendance" name="attendance">
+                    <option value="Attending">Attending</option>
+                    <option value="NotAttending">Not Attending</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="diet">Dietary Reqs</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="diet" name="diet" placeholder="Vegan, Veggie etc.">
+                </div>
+                </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="songs">Song Requests</label>
+                </div>
+                <div class="col-75">
+                  <textarea id="songs" name="songs" placeholder="Give us some song requests"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <input type="submit" value="Submit">
+              </div>
+            </form>
+          </div>
+        
+    </section>
+
+    <footer>
+        <p>Created by Emma - 2022</p>
+    </footer>
+
+</body>
+</html>
