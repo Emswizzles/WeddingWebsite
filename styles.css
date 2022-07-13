@@ -15,6 +15,7 @@ footer{
     display: flex;
 }
 
+
 /* HEADER AND NAV BAR */
 .title {
     padding: 20px 0 2px 0;
@@ -104,9 +105,22 @@ a {
 
 .image-placeholder{
     width: 100%;
-    height: 300px;
-    background-color: steelblue;
     margin-top: 40px;
+    display: flex;
+}
+
+.pic-col{
+    flex: 33%;
+    padding: 5px;
+}
+
+.pic{
+    width: 100%;
+    max-height: 290px;
+}
+
+@media (max-width: 500px){
+    
 }
 
 .story{
@@ -250,6 +264,16 @@ p.txt {
     margin: 5% 25%;
 }
 
+/* GIFTS PAGE */
+
+.gifts-image{
+    width: 100%;
+    height: 300px;
+    background-image: url(images/beach.jpg);
+    background-size: 100%;
+}
+
+
 /* RSVP PAGE */
 
 .container {
@@ -257,4 +281,11 @@ p.txt {
     background-color: #f2f2f2;
     padding: 20px;
     margin: 5% 15%;
+}
+
+.rsvp-image{
+    width: 100%;
+    height: 300px;
+    background-image: url(images/envelope.jpg);
+    background-size: 100%;
 }
